@@ -1,0 +1,138 @@
+/* Global view */
+body {
+    font-family: 'Asap', sans-serif;
+    color: white;
+    background-color:#EBEBEB;
+}
+
+.container {
+    min-height: 500px;
+    max-width: 1024px;
+    margin: 0px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 140px;
+}
+
+.header-container{
+    width: 100%;
+    position: fixed;
+    min-height: 100px;
+    background-color: rgb(58, 58, 58);
+}
+
+header {
+    max-width: 1024px;
+    min-height: 100px;
+    margin: 0px auto;
+    /* background-color: black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+header .log p span {
+    font-weight: 700;
+}
+
+.mybutton{
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    margin-right: 20px;
+    padding: 10px 25px;
+}
+
+.col {
+    background-color: rgb(93, 219, 110);
+    width: 30%;
+    margin-bottom: 40px;
+}
+
+.container .col:last-child{
+    display: none;
+}
+
+.col img {
+    width: 100%;
+    height: auto;
+}
+
+.col p{
+    font-size: 0.825rem;
+    padding: 20px 25px;
+    line-height: 1.25rem;
+}
+
+.col p::first-line {
+    font-weight: 700;
+}
+
+.mob-wrapper {
+    display: none;
+}
+
+/* Tablet view */
+@media (max-width: 768px) {
+
+    .mob-wrapper {
+        display: block;
+        padding-right: 30px;
+    }
+
+    .mobnav {
+        display: none;
+        position: absolute;
+    }
+
+    .navbutton{
+        color: white;
+        text-decoration: none;
+        display: block;
+        background-color: orange;
+        padding: 15px 30px;
+        margin-left: -60px;
+        text-align: center;
+    }
+
+   .col{
+       width: 45%;
+   }
+   .container .col:last-child{
+       display: block;
+   }
+
+   .header-container {
+       position: relative;
+   }
+
+   .container {
+       padding-top: 40px;
+       
+   }
+   nav {
+       display: none;
+   }
+  
+   .log {
+        padding: 40px 0px;
+   }
+
+}
+
+/* Mobile view */
+@media (max-width: 400px) {
+    .col {
+        width: 100%;
+    }
+
+    .container .col:nth-child(n+4){
+        display: none;
+    }
+        
+    .container .col:last-child{
+        display: block;
+    }
+
+}
